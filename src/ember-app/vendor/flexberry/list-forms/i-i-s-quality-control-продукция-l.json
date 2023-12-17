@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-quality-control-продукция-e",
+  "editForm": "i-i-s-quality-control-продукция-e",
+  "external": false,
+  "caption": "Продукция",
+  "name": "IISQualityControlПродукцияL",
+  "className": "ПродукцияL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-продукция",
+      "modelProjection": "ПродукцияL"
+    }
+  ]
+}

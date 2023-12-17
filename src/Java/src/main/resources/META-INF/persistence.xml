@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>QualityControl.model.Oborudovanie</class>
+        <class>QualityControl.model.Dolzhnost</class>
+        <class>QualityControl.model.Produkciya</class>
+        <class>QualityControl.model.Proveryaemoe</class>
+        <class>QualityControl.model.Otchet</class>
+        <class>QualityControl.model.Sotrudnik</class>
+        <class>QualityControl.model.FlexberryAdvLimit</class>
+        <class>QualityControl.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>QualityControl.model.NewPlatformFlexberryServicesLock</class>
+        <class>QualityControl.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>

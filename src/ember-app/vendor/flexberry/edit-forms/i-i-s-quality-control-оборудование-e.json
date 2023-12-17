@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Оборудование",
+  "name": "IISQualityControlОборудованиеE",
+  "className": "ОборудованиеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-оборудование",
+      "modelProjection": "ОборудованиеE"
+    }
+  ]
+}

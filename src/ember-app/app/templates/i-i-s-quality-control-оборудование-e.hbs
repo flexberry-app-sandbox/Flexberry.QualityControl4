@@ -1,0 +1,57 @@
+<h3 class="ui header">{{t "forms.i-i-s-quality-control-оборудование-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.название
+      class=(if (v-get validationModel "название" "isInvalid") "error")
+      label=(t "forms.i-i-s-quality-control-оборудование-e.название-caption")
+      data-test-i-i-s-quality-control-оборудование-e-название=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "название" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-quality-control-оборудование-e-тип="true">
+    <label>{{t "forms.i-i-s-quality-control-оборудование-e.тип-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-quality-control-тип-устройства")
+      value=model.тип
+      class=(if (v-get validationModel "тип" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тип" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.паспорт
+      class=(if (v-get validationModel "паспорт" "isInvalid") "error")
+      label=(t "forms.i-i-s-quality-control-оборудование-e.паспорт-caption")
+      data-test-i-i-s-quality-control-оборудование-e-паспорт=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "паспорт" "message")}}
+  </div>
+</form>

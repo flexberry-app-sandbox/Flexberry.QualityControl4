@@ -1,0 +1,1 @@
+docker-compose -p qualitycontrol up -d

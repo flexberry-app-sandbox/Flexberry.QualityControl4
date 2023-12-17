@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-quality-control-должность-e",
+  "editForm": "i-i-s-quality-control-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISQualityControlДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

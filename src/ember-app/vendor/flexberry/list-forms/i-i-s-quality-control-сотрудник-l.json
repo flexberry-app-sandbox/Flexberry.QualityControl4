@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-quality-control-сотрудник-e",
+  "editForm": "i-i-s-quality-control-сотрудник-e",
+  "external": false,
+  "caption": "Сотрудник",
+  "name": "IISQualityControlСотрудникL",
+  "className": "СотрудникL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-сотрудник",
+      "modelProjection": "СотрудникL"
+    }
+  ]
+}

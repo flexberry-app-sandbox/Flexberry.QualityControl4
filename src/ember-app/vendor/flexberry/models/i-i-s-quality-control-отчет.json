@@ -1,0 +1,169 @@
+﻿{
+  "name": "IISQualityControlОтчет",
+  "modelName": "i-i-s-quality-control-отчет",
+  "className": "Отчет",
+  "nameSpace": "IIS.QualityControl",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "оборудование",
+      "relatedTo": "i-i-s-quality-control-оборудование",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "ответственный",
+      "relatedTo": "i-i-s-quality-control-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "проверяемое",
+      "relatedTo": "i-i-s-quality-control-проверяемое",
+      "inverse": "отчет"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОтчетE",
+      "modelName": "i-i-s-quality-control-отчет",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "Оборудование",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Оборудование",
+          "name": "оборудование",
+          "relatedTo": "i-i-s-quality-control-оборудование",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Ответственный",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Ответственный",
+          "name": "ответственный",
+          "relatedTo": "i-i-s-quality-control-сотрудник",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ПроверяемоеE",
+          "caption": "Проверяемое",
+          "name": "проверяемое",
+          "relatedTo": "i-i-s-quality-control-проверяемое",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ОтчетL",
+      "modelName": "i-i-s-quality-control-отчет",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Оборудование",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Название",
+          "name": "оборудование",
+          "relatedTo": "i-i-s-quality-control-оборудование",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Ответственный",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер",
+          "name": "ответственный",
+          "relatedTo": "i-i-s-quality-control-сотрудник",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-quality-control-оборудование-e",
+  "editForm": "i-i-s-quality-control-оборудование-e",
+  "external": false,
+  "caption": "Оборудование",
+  "name": "IISQualityControlОборудованиеL",
+  "className": "ОборудованиеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-оборудование",
+      "modelProjection": "ОборудованиеL"
+    }
+  ]
+}

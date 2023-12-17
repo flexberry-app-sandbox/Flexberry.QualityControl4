@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-quality-control-отчет-e",
+  "editForm": "i-i-s-quality-control-отчет-e",
+  "external": false,
+  "caption": "Отчет",
+  "name": "IISQualityControlОтчетL",
+  "className": "ОтчетL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-quality-control-отчет",
+      "modelProjection": "ОтчетL"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<h3 class="ui header">{{t "forms.i-i-s-quality-control-отчет-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-quality-control-отчет-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-quality-control-отчет-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-quality-control-отчет-e.оборудование-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.оборудование
+      displayAttributeName="название"
+      autocomplete=true
+      relationName="оборудование"
+      projection="ОборудованиеL"
+      title=(t "forms.i-i-s-quality-control-отчет-e.оборудование-caption")
+      readonly=readonly
+      componentName="оборудованиеLookup"
+      class=(if (v-get validationModel "оборудование" "isInvalid") "error")
+      data-test-i-i-s-quality-control-отчет-e-оборудование=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оборудование" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-quality-control-отчет-e.ответственный-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.ответственный
+      displayAttributeName="номер"
+      autocomplete=true
+      relationName="ответственный"
+      projection="СотрудникL"
+      title=(t "forms.i-i-s-quality-control-отчет-e.ответственный-caption")
+      readonly=readonly
+      componentName="ответственныйLookup"
+      class=(if (v-get validationModel "ответственный" "isInvalid") "error")
+      data-test-i-i-s-quality-control-отчет-e-ответственный=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ответственный" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-quality-control-отчет-e.проверяемое-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="проверяемоеGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.проверяемое
+      content=model.проверяемое
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "проверяемое" "isInvalid") "error")
+      data-test-i-i-s-quality-control-отчет-e-проверяемое=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "проверяемое" "message")}}
+  </div>
+</form>

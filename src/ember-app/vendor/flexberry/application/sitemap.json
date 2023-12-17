@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Quality control",
+  "applicationTitle": "Quality control",
+  "items": [
+    {
+      "link": null,
+      "menuName": "контроль-качества",
+      "caption": "Контроль качества",
+      "title": "Контроль качества",
+      "children": [
+        {
+          "link": "i-i-s-quality-control-оборудование-l",
+          "menuName": null,
+          "caption": "Оборудование",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-quality-control-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-quality-control-продукция-l",
+          "menuName": null,
+          "caption": "Продукция",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-quality-control-отчет-l",
+          "menuName": null,
+          "caption": "Отчет",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-quality-control-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

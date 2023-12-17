@@ -1,0 +1,49 @@
+﻿{
+  "name": "IISQualityControlПроверяемое",
+  "modelName": "i-i-s-quality-control-проверяемое",
+  "className": "Проверяемое",
+  "nameSpace": "IIS.QualityControl",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "качество",
+      "type": "i-i-s-quality-control-качество",
+      "flexberryType": "Качество",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "продукция",
+      "relatedTo": "i-i-s-quality-control-продукция",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "отчет",
+      "relatedTo": "i-i-s-quality-control-отчет",
+      "inverse": "проверяемое"
+    }
+  ],
+  "hasMany": [],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
